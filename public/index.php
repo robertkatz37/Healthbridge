@@ -3,6 +3,21 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 
+// Ensure writable folders exist in serverless ephemeral storage
+$dirs = [
+    '/tmp/storage/framework/views',
+    '/tmp/storage/framework/cache',
+    '/tmp/storage/framework/sessions',
+    '/tmp/storage/logs',
+];
+
+foreach ($dirs as $dir) {
+    if (!is_dir($dir)) {
+        mkdir($dir, 0755, true);
+    }
+}
+
+require __DIR__ . '/../public/index.php';
 define('LARAVEL_START', microtime(true));
 
 // Determine if the application is in maintenance mode...
