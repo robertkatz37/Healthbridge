@@ -18,7 +18,6 @@
     },
     "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "vercel-build": "composer install --no-dev --prefer-dist --optimize-autoloader && vite build"
-}
+    "build": "vite build"
+    }
 }
