@@ -3,6 +3,11 @@
 // See UI_STYLE_GUIDE.md for full specification
 
 // ─── Bootstrap Icons (local npm package — no CDN dependency) ────────────────
+// Before:
+// @import 'bootstrap/scss/bootstrap';
+
+// After:
+@use 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // ─── Brand Color Variables ────────────────────────────────────────────────────
